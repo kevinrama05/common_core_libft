@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   funct_six_to_ten.c                                 :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekrama10 <ekrama10@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 23:34:49 by ekrama10          #+#    #+#             */
-/*   Updated: 2025/10/14 00:05:47 by ekrama10         ###   ########.fr       */
+/*   Created: 2025/10/14 13:56:31 by kerama            #+#    #+#             */
+/*   Updated: 2025/10/14 14:00:03 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	strlen(const char *s)
+int	ft_isdigit(int c)
 {
-	size_t	len;
-	
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	return (c >= '0' && c <= '9');
 }
-
-
