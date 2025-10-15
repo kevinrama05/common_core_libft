@@ -6,12 +6,22 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:27:00 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/14 14:37:33 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/15 14:16:37 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+
+static size_t	ft_in_strlen(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -22,7 +32,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
+	len = ft_in_strlen(s1) + ft_in_strlen(s2);
 	string = (char *)malloc(sizeof(char) * (len + 1));
 	if (!string)
 		return (NULL);

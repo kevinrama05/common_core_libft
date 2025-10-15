@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:13:09 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:33:36 by kerama           ###   ########.fr       */
+/*   Created: 2025/10/15 13:22:10 by kerama            #+#    #+#             */
+/*   Updated: 2025/10/15 13:39:05 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	j;
+	t_list	*head;
+	t_list	*to_delete;
 
-	if (!dst || !src)
-		return (0);
-	dst_len = 0;
-	while (dst[dst_len] && dst_len < size)
-		dst_len++;
-	src_len = 0;
-	while (src[src_len])
-		src_len++;
-	j = 0;
-	while (src[j] && (dst_len + j + 1) < size)
+	if (!lst)
+		return ;
+	head = *lst;
+	while (head)
 	{
-		dst[dst_len + j] = src[j];
-		j++;
+		to_delete = head;
+		head = head->next;
+		del(to_delete->content);
+		free(to_delete);
 	}
-	if (dst_len < size)
-		dst[dst_len + j] = '\0';
-	return (dst_len + src_len);
+	*lst = NULL;
 }

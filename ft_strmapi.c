@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrch.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:18:21 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:17:30 by kerama           ###   ########.fr       */
+/*   Created: 2025/10/15 10:20:00 by kerama            #+#    #+#             */
+/*   Updated: 2025/10/15 13:33:32 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 
@@ -23,20 +24,24 @@ static size_t	ft_in_strlen(const char *s)
 	return (len);
 }
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	size_t	len;
+	int		i;
+	char	*s1;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
-	i = ft_in_strlen(s);
-	while (i > 0)
+	len = ft_in_strlen(s);
+	s1 = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s1)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		i--;
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
+		s1[i] = f(i, s[i]);
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)&s[ft_in_strlen(s)]);
-	return (NULL);
+	s1[i] = '\0';
+	return (s1);
 }

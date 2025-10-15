@@ -1,38 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:13:09 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:33:36 by kerama           ###   ########.fr       */
+/*   Created: 2025/10/15 11:19:31 by kerama            #+#    #+#             */
+/*   Updated: 2025/10/15 11:33:52 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	j;
-
-	if (!dst || !src)
-		return (0);
-	dst_len = 0;
-	while (dst[dst_len] && dst_len < size)
-		dst_len++;
-	src_len = 0;
-	while (src[src_len])
-		src_len++;
-	j = 0;
-	while (src[j] && (dst_len + j + 1) < size)
-	{
-		dst[dst_len + j] = src[j];
-		j++;
-	}
-	if (dst_len < size)
-		dst[dst_len + j] = '\0';
-	return (dst_len + src_len);
+	write(fd, &c, 1);
 }

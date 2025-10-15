@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:13:09 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:33:36 by kerama           ###   ########.fr       */
+/*   Created: 2025/10/15 11:04:33 by kerama            #+#    #+#             */
+/*   Updated: 2025/10/15 11:19:18 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	j;
+	unsigned int	i;
 
-	if (!dst || !src)
-		return (0);
-	dst_len = 0;
-	while (dst[dst_len] && dst_len < size)
-		dst_len++;
-	src_len = 0;
-	while (src[src_len])
-		src_len++;
-	j = 0;
-	while (src[j] && (dst_len + j + 1) < size)
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
 	{
-		dst[dst_len + j] = src[j];
-		j++;
+		f(i, &s[i]);
+		i++;
 	}
-	if (dst_len < size)
-		dst[dst_len + j] = '\0';
-	return (dst_len + src_len);
 }
