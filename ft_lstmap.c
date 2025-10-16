@@ -6,7 +6,7 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:47:46 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:42:03 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/16 09:58:04 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-t_list	*ft_in_lstnew(void *content)
+static t_list	*ft_in_lstnew(void *content)
 {
 	t_list	*new_node;
 
@@ -26,7 +26,7 @@ t_list	*ft_in_lstnew(void *content)
 	return (new_node);
 }
 
-void	ft_in_lstadd_back(t_list **lst, t_list *new)
+static void	ft_in_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*head;
 
