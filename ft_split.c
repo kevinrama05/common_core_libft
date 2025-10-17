@@ -6,19 +6,20 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 09:44:25 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:15:02 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:31:19 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 static int	ft_is_sep(char c, char ch)
 {
 	return (c == ch);
 }
 
-static int	ft_count_words(char *str, char ch)
+static int	ft_count_words(char const *str, char ch)
 {
 	int	count;
 	int	in_word;
@@ -41,7 +42,7 @@ static int	ft_count_words(char *str, char ch)
 	return (count);
 }
 
-static int	ft_word_len(char *str, char ch)
+static int	ft_word_len(char const *str, char ch)
 {
 	int	len;
 
@@ -51,7 +52,7 @@ static int	ft_word_len(char *str, char ch)
 	return (len);
 }
 
-static char	*ft_strdup_range(char *str, int len)
+static char	*ft_strdup_range(char const *str, int len)
 {
 	char	*dup;
 	int		i;
@@ -69,7 +70,7 @@ static char	*ft_strdup_range(char *str, int len)
 	return (dup);
 }
 
-char	**ft_split(char *str, char ch)
+char	**ft_split(char const *str, char ch)
 {
 	char	**tab;
 	int		words;

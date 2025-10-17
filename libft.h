@@ -6,12 +6,13 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:26:29 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:06:35 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:29:01 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

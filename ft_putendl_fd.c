@@ -6,13 +6,14 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:41:31 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 11:46:28 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:24:21 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

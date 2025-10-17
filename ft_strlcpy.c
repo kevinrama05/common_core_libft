@@ -6,11 +6,12 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:09:35 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/14 14:12:46 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:24:43 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

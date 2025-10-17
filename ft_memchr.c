@@ -6,11 +6,12 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:19:38 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:40:28 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:23:59 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

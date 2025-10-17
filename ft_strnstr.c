@@ -6,12 +6,13 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:21:54 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 12:41:25 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:24:52 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

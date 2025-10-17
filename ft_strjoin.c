@@ -6,11 +6,12 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:27:00 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 14:16:37 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:24:39 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 #include "libft.h"
 
 static size_t	ft_in_strlen(const char *s)

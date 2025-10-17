@@ -6,13 +6,14 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:30:39 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 11:39:27 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:24:28 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

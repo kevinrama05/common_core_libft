@@ -6,12 +6,13 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 08:50:33 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 09:40:52 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:24:56 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 #include "libft.h"
 
 static size_t	ft_is_set(char ch, char const *set)

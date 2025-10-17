@@ -6,12 +6,13 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 09:51:34 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/15 10:19:13 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 11:02:29 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 static int	ft_digits(int n)
 {
@@ -28,10 +29,15 @@ static int	ft_digits(int n)
 	return (digits);
 }
 
-static void	ft_negative(int *sign, int *num)
+static void	ft_is_negative(int *sign, int *num)
 {
-	*num = -(*num);
-	*sign = 1;
+	if (*num < 0)
+	{
+		*num = -(*num);
+		*sign = 1;
+	}
+	else
+		*sign = 0;
 }
 
 char	*ft_itoa(int n)
@@ -40,15 +46,14 @@ char	*ft_itoa(int n)
 	int		indexes;
 	char	*number;
 
-	if (n < 0)
-		ft_negative(&sign, &n);
-	else
-		sign = 0;
+	ft_is_negative(&sign, &n);
 	if (n == 0)
 		return ("0");
 	else if (n == -2147483648)
 		return ("-2147483648");
 	number = (char *)malloc(sizeof(char) * (ft_digits(n) + sign + 1));
+	if (!number)
+		return (NULL);
 	indexes = ft_digits(n) + sign - 1;
 	number[indexes] = '\0';
 	while (n != 0)
@@ -64,7 +69,7 @@ char	*ft_itoa(int n)
 
 // int main(void)
 // {
-// 	int n = -1654684;
+// 	int n = 1654684;
 // 	printf("Number: %s\n", ft_itoa(n));
 // 	return 0;
 // }

@@ -6,13 +6,14 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:29:33 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/14 13:52:32 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:24:58 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,9 +6,13 @@
 /*   By: kerama <kerama@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:16:43 by kerama            #+#    #+#             */
-/*   Updated: 2025/10/14 14:16:54 by kerama           ###   ########.fr       */
+/*   Updated: 2025/10/17 10:28:41 by kerama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+#include <ctype.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
